@@ -13,11 +13,11 @@ Este es el repositorio del *Grupo X*, cuyos integrantes son:
 
 ## Wiki
 
-Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-1-grupo-00/-/wikis/home)
+Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-00/-/wikis/home)
 
 ## Videos
 
-* [Video presentación cliente](https://youtu.be/p-MXR05KMDc)
+* [Video presentación cliente](https://youtu.be/pl63bvYMthk)
 * [Video presentación avance 1](https://www.youtube.com/)
 * Etc ...
 
