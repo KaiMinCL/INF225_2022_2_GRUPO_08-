@@ -1,7 +1,3 @@
-> Este proyecto es de referencia para todos los tutores de la asignatura
-> * Cualquier duda a [wladimir.ormazabal@usm.cl](mailto:wladimir.ormazabal@usm.cl)
-> Notar que **X** corresponde al número del grupo asignado.
-
 # Grupo 8
 
 Este es el repositorio del *Grupo 13*, cuyos integrantes son:
