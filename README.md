@@ -13,7 +13,7 @@ Este es el repositorio del *Grupo 13*, cuyos integrantes son:
 
 ## Wiki
 
-Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-00/-/wikis/home)
+Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-08/-/wikis/home)
 
 ## Videos
 
