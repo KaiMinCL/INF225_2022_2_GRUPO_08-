@@ -21,8 +21,8 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "API EJEMPLO",
-        Description = "EJEMPLO GRUPO 00 INF225"
+        Title = "API ",
+        Description = "GRUPO 08 INF225"
     });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
