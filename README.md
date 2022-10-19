@@ -18,3 +18,4 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.
 
 ## Aspectos técnicos relevantes
 
+esta es una prueba
