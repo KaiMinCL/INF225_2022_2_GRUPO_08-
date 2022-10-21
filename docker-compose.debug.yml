@@ -3,13 +3,24 @@
 version: '3.4'
 
 services:
-  ejemplo:
-    image: ejemplo
+  api-insumos:
+    image: api-insumos
     build:
       context: .
-      dockerfile: Ejemplo/Ejemplo/Dockerfile
+      dockerfile: API_INSUMOS/API/Dockerfile
     ports:
       - 5057:5057
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+  api-productos:
+    image: api-productos
+    build:
+      context: .
+      dockerfile: API_Productos/API/Dockerfile
+    ports:
+      - 5058:5058
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
