@@ -3,8 +3,8 @@
 version: '3.4'
 
 services:
-  api-productos:
-    image: api-productos
+  api-pedidos:
+    image: api-pedidos
     build:
       context: .
       dockerfile: ./Dockerfile

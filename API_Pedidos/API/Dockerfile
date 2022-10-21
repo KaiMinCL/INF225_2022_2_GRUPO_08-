@@ -11,17 +11,17 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
-COPY ["API_Productos/API/ProductosApi.csproj", "API/"]
-RUN dotnet restore "API/ProductosApi.csproj"
+COPY ["API_Pedidos/API/PedidosApi.csproj", "API/"]
+RUN dotnet restore "API/PedidosApi.csproj"
 COPY . .
-WORKDIR "/src/API_Productos/API/"
-RUN dotnet build "ProductosApi.csproj" -c Release -o /app/build
+WORKDIR "/src/API_Pedidos/API/"
+RUN dotnet build "PedidosApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ProductosApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "PedidosApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY ["API_Productos/API/Scripts", "/app/Scripts"]
-ENTRYPOINT ["dotnet", "ProductosApi.dll"]
+COPY ["API_Pedidos/API/Scripts", "/app/Scripts"]
+ENTRYPOINT ["dotnet", "PedidosApi.dll"]

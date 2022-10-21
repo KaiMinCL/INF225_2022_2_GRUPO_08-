@@ -14,11 +14,11 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
-  api-productos:
-    image: api-productos
+  api-pedidos:
+    image: api-pedidos
     build:
       context: .
-      dockerfile: API_Productos/API/Dockerfile
+      dockerfile: API_Pedidos/API/Dockerfile
     ports:
       - 5058:5058
     environment:
