@@ -7,14 +7,14 @@ services:
     image: api-insumos
     build:
       context: .
-      dockerfile: API_INSUMOS/API/Dockerfile
+      dockerfile: APIs/Insumos_Dockerfile
     ports:
       - 5057:5057
   api-pedidos:
     image: api-pedidos
     build:
       context: .
-      dockerfile: API_Pedidos/API/Dockerfile
+      dockerfile: APIs/Pedidos_Dockerfile
     ports:
       - 5058:5058
   
