@@ -18,4 +18,5 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.
 
 ## Aspectos técnicos relevantes
 
-esta es una prueba
+** Recursos utilizados ** : -C Sharp -Json -Mssql -Docker -Csproj.
+** Sistema Operativo ** : Sistemas Web.
