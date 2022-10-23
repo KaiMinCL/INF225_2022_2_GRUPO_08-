@@ -18,5 +18,11 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.
 
 ## Aspectos técnicos relevantes
 
-** Recursos utilizados ** : -C Sharp -Json -Mssql -Docker -Csproj.
-** Sistema Operativo ** : Sistemas Web.
+**Recursos utilizados**: 
+- C# para la mayoría del codigo
+- Json para las respuestas de la WebAPI
+- [Docker](https://www.docker.com/)
+- MSQL Server para almacenar las bases de datos
+- [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [Swagger](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-6.0) para la documentación de las APIs
+- [DbUP](https://github.com/wormaza/Transversal.Util.BaseDBUp) para la implementación de parches
