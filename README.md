@@ -33,6 +33,6 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
  
 
 ## Evidencias
-Para revisar evidencias sobre el levantamiento del proyecto, ingrese [aquí]()
+Para revisar evidencias sobre el levantamiento del proyecto, ingrese [aquí](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-08/-/wikis/Evidencias-Levantamiento)
 
 
