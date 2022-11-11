@@ -15,6 +15,7 @@ Puede acceder a la Wiki mediante el siguiente [enlace](https://gitlab.inf.utfsm.
 
 * [Video presentación cliente](https://www.youtube.com/watch?v=pl63bvYMthk&feature=youtu.be&ab_channel=WladimirOrmaz%C3%A1bal)
 * [Video presentación avance 1](https://www.youtube.com/watch?v=sLNHGzOnorU&ab_channel=EliosPokefan)
+* [Video presentación prototipo 1](https://youtu.be/CwdVQDFAkaw)
 
 
 ## APIs
