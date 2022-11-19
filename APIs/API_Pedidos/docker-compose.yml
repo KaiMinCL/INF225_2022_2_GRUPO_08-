@@ -9,5 +9,5 @@ services:
       context: .
       dockerfile: ./APIs/Pedidos_Dockerfile
     ports:
-      - 5058:5058
+      - 5058:5057
 
