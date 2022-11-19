@@ -18,7 +18,7 @@ CREATE TABLE Clientes(
 )
 
 CREATE TABLE STAFF(
-    ID_Staff INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_STAFF INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
 	Nombre varchar(100) NOT NULL,
     Usuario varchar(30),
     Contrasena varchar(100) NOT NULL,
