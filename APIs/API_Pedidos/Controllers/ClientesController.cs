@@ -16,43 +16,72 @@ namespace API.Controllers
         public ClientesController(string conString, ILogger<ClientesController> logger) : base(conString, DataBaseType.SqlServer, new ClientesDA(), logger ) { }
 
         /// <summary>
-        /// Obtiene todos los Pedidos, si no se indican parámetros de consulta se retornan todos
+        /// Si no se indica el Id del Cliente, se retornan todos los Clientes registrados
         /// </summary>
         /// <returns></returns>
         /// <response code="200">Returns ...</response>
+
         [HttpGet("")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<ClientesModel>>> GetClientes() => await base.Get();
 
         /// <summary>
-        /// Obtiene Insumo a partir de su ID
+        /// Si se indica el Id del cliente, se retorna el cliente relacionado al respectivo id
         /// </summary>
-        /// <param name="id">Identificador del color</param>
+        /// <param name="id">Identificador del Cliente</param>
         /// <returns></returns>
         /// <remarks>
-        /// Sample request: TO DO
+        /// Sample request: \
+        ///                 curl -X 'GET' \
+        ///                 'URL_API/Clientes/{ID}' \
+        ///                 -H 'accept: application/json'
         /// </remarks>
         /// <response code="200">Returns ...</response>
+
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ClientesModel>> GetClienteById(string id) => await base.GetById(id);
 
         /// <summary>
-        /// Permite crear nuevos Pedidos
+        /// Permite crear nuevos clientes
         /// </summary>
-        /// <param name="value">Informacion del tipo de documento</param>
+        /// <param name="value">Body de Solicitud</param>
         /// <returns></returns>
         /// <remarks>
-        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// Sample request: ...
         /// </remarks>
         /// <response code="200">Inserción correcta</response>
+
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ClientesModel>> PostCliente([FromBody]ClientesModel value) => await base.Post(value);
 
+        /// <summary>
+        /// Permite modificar los clientes
+        /// </summary>
+        /// <param name="value">Body de Solicitud</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: ...
+        /// </remarks>
+        /// <response code="200">Actualización correcta</response>
+
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ClientesModel>> PutCliente([FromBody]ClientesModel value) => await base.Put(value);
+
+        /// <summary>
+        /// Permite eliminar clientes
+        /// </summary>
+        /// <param name="id">Identificador del Cliente</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: \
+        ///                 curl -X 'DELETE' \
+        ///                 'URL_API/Clientes/{ID}' \
+        ///                 -H 'accept: application/json'
+        /// </remarks>
+        /// <response code="200">Eliminación correcta</response>
 
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

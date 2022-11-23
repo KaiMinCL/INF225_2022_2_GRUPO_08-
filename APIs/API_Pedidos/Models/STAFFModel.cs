@@ -7,7 +7,7 @@ namespace API.Models
     {
 
         //NECESARIO MODIFICAR EN RELACIÓN A LA TABLA PEDIDOS
-        [ExplicitKey]
+        [Key]
         public int ID_STAFF { get; set; }
         public string? Nombre { get; set; }
         public string? Usuario { get; set; }

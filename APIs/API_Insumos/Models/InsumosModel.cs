@@ -5,7 +5,7 @@ namespace API.Models
     [Table("Insumos")]
     public class InsumosModel
     {
-        [ExplicitKey]
+        [Key]
         public string? ID_Insumo { get; set; }
         public string? Nombre { get; set; }
         public int Stock { get; set; }

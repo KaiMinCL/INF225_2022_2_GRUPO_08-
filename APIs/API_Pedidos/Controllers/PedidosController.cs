@@ -16,7 +16,7 @@ namespace API.Controllers
         public PedidosController(string conString, ILogger<PedidosController> logger) : base(conString, DataBaseType.SqlServer, new PedidosDA(), logger ) { }
 
         /// <summary>
-        /// Obtiene todos los Pedidos, si no se indican parámetros de consulta se retornan todos
+        /// Si no se indica el Id del pedido, se retornan todos los pedidos registrados
         /// </summary>
         /// <returns></returns>
         /// <response code="200">Returns ...</response>
@@ -25,34 +25,60 @@ namespace API.Controllers
         public async Task<ActionResult<IEnumerable<PedidosModel>>> GetPedidos() => await base.Get();
 
         /// <summary>
-        /// Obtiene Insumo a partir de su ID
+        /// Si se indica el Id del pedido, se retorna el pedido relacionado al respectivo id
         /// </summary>
-        /// <param name="id">Identificador del color</param>
+        /// <param name="id">Identificador del Pedido</param>
         /// <returns></returns>
         /// <remarks>
-        /// Sample request: TO DO
+        /// Sample request: curl -X 'GET' \
+        ///                 'URL_API/Pedidos/{ID}' \
+        ///                 -H 'accept: application/json'
         /// </remarks>
         /// <response code="200">Returns ...</response>
+
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<PedidosModel>> GetPedidoById(string id) => await base.GetById(id);
 
         /// <summary>
-        /// Permite crear nuevos Pedidos
+        /// Permite crear nuevos pedidos
         /// </summary>
-        /// <param name="value">Informacion del tipo de documento</param>
+        /// <param name="value">Body de Solicitud</param>
         /// <returns></returns>
         /// <remarks>
-        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// Sample request: ...
         /// </remarks>
         /// <response code="200">Inserción correcta</response>
+
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<PedidosModel>> PostPedido([FromBody]PedidosModel value) => await base.Post(value);
 
+        /// <summary>
+        /// Permite modificar los pedidos
+        /// </summary>
+        /// <param name="value">Body de Solicitud</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: ...
+        /// </remarks>
+        /// <response code="200">Actualización correcta</response>
+
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<PedidosModel>> PutPedido([FromBody]PedidosModel value) => await base.Put(value);
+
+        /// <summary>
+        /// Permite eliminar pedidos
+        /// </summary>
+        /// <param name="id">Identificador del Pedido</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: curl -X 'DELETE' \
+        ///                 'URL_API/Pedidos/{ID}' \
+        ///                 -H 'accept: application/json'
+        /// </remarks>
+        /// <response code="200">Eliminación correcta</response>
 
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

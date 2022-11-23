@@ -16,7 +16,7 @@ namespace API.Controllers
         public ComprasController(string conString, ILogger<ComprasController> logger) : base(conString, DataBaseType.SqlServer, new ComprasDA(), logger ) { }
 
         /// <summary>
-        /// Obtiene todos los Pedidos, si no se indican parámetros de consulta se retornan todos
+        /// Si no se indica el Id de la compra, se retornan todas las compras
         /// </summary>
         /// <returns></returns>
         /// <response code="200">Returns ...</response>
@@ -25,34 +25,59 @@ namespace API.Controllers
         public async Task<ActionResult<IEnumerable<ComprasModel>>> GetCompras() => await base.Get();
 
         /// <summary>
-        /// Obtiene Insumo a partir de su ID
+        /// Si se indica el Id de la compra, se retornan la compra relacionada al respectivo id
         /// </summary>
-        /// <param name="id">Identificador del color</param>
+        /// <param name="id">Identificador de la compra</param>
         /// <returns></returns>
         /// <remarks>
-        /// Sample request: TO DO
+        /// Sample request: curl -X 'GET' \
+        ///                 'URL_API/Compras/{ID}' \
+        ///                 -H 'accept: application/json'
         /// </remarks>
         /// <response code="200">Returns ...</response>
+
         [HttpGet("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ComprasModel>> GetComprasbyID(string id) => await base.GetById(id);
 
         /// <summary>
-        /// Permite crear nuevos Pedidos
+        /// Permite crear nuevas compras
         /// </summary>
-        /// <param name="value">Informacion del tipo de documento</param>
+        /// <param name="value">Body de Solicitud</param>
         /// <returns></returns>
         /// <remarks>
-        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// Sample request: ...
         /// </remarks>
         /// <response code="200">Inserción correcta</response>
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ComprasModel>> PostCompra([FromBody]ComprasModel value) => await base.Post(value);
 
+                /// <summary>
+        /// Permite modificar las compras
+        /// </summary>
+        /// <param name="value">Body de Solicitud</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: ...
+        /// </remarks>
+        /// <response code="200">Actualización correcta</response>
+
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<ComprasModel>> PutCompra([FromBody]ComprasModel value) => await base.Put(value);
+
+        /// <summary>
+        /// Permite eliminar compras
+        /// </summary>
+        /// <param name="id">Identificador de la compra</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request: curl -X 'DELETE' \
+        ///                 'URL_API/Compras/{ID}' \
+        ///                 -H 'accept: application/json'
+        /// </remarks>
+        /// <response code="200">Eliminación correcta</response>
 
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

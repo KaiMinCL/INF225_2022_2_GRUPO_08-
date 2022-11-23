@@ -7,7 +7,7 @@ namespace API.Models
     {
 
         //NECESARIO MODIFICAR EN RELACIÓN A LA TABLA PEDIDOS
-        [ExplicitKey]
+        [Key]
         public int ID_Pedido { get; set; }
         public int Valor { get; set; }
         public int ID_Tienda { get; set; }

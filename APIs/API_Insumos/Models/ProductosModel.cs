@@ -6,7 +6,7 @@ namespace API.Models
     public class ProductosModel
 
     {
-        [ExplicitKey]
+        [Key]
         public string? ID_Producto { get; set; }
         public string? Nombre { get; set; }
         public int Stock { get; set; }
