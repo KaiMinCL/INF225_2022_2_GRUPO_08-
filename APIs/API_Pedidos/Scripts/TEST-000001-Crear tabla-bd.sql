@@ -5,20 +5,20 @@ DECLARE @CurrentUser sysname
 select @CurrentUser = schema_name()
 
 CREATE TABLE Tiendas(
-    ID_Tienda INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_Tienda INT IDENTITY(0,1) PRIMARY KEY,
 	Nombre varchar(100) NOT NULL,
     Instagram varchar(100),
 )
 
 CREATE TABLE Clientes(
-    ID_Cliente INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_Cliente INT IDENTITY(0,1) PRIMARY KEY,
 	Nombre varchar(100) NOT NULL,
     RUT varchar(30),
     Contrasena varchar(100) NOT NULL,
 )
 
 CREATE TABLE STAFF(
-    ID_STAFF INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_STAFF INT IDENTITY(0,1) PRIMARY KEY,
 	Nombre varchar(100) NOT NULL,
     Usuario varchar(30),
     Contrasena varchar(100) NOT NULL,
@@ -26,13 +26,13 @@ CREATE TABLE STAFF(
 )
 
 CREATE TABLE Compras(
-    ID_Compra INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_Compra INT IDENTITY(0,1) PRIMARY KEY,
 	Valor INT NOT NULL,
     ID_Cliente INT FOREIGN KEY REFERENCES Clientes(ID_Cliente)
 )
 
 CREATE TABLE Pedidos(
-    ID_Pedido INT IDENTITY(0,1) PRIMARY KEY NOT NULL,
+    ID_Pedido INT IDENTITY(0,1) PRIMARY KEY,
 	Valor INT NOT NULL,
     ID_Tienda INT FOREIGN KEY REFERENCES Tiendas(ID_Tienda)
 )
