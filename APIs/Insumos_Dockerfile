@@ -15,10 +15,10 @@ COPY ["/APIs/API_Insumos/InsumosApi.csproj", "API_Insumos/"]
 RUN dotnet restore "API_Insumos/InsumosApi.csproj"
 COPY . .
 WORKDIR "/src/APIs/API_Insumos/"
-RUN dotnet build "InsumosApi.csproj" -c Release -o /app/build
+RUN dotnet build "InsumosApi.csproj" -c Release -o /app/build#
 
 FROM build AS publish
-RUN dotnet publish "InsumosApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "InsumosApi.csproj" -c Release -o /app/publish /p:UseAppHost=false#
 
 FROM base AS final
 WORKDIR /app

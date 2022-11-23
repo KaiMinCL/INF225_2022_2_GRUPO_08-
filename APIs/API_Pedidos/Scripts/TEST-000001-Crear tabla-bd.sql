@@ -40,5 +40,5 @@ CREATE TABLE Pedidos(
 CREATE TABLE ProductosEnPedido(
 	ID_Pedido INT FOREIGN KEY REFERENCES Pedidos(ID_Pedido),
 	ID_Producto INT,
-    PRIMARY KEY (ID_Producto,ID_Insumo)
+    PRIMARY KEY (ID_Producto,ID_Pedido)
 )

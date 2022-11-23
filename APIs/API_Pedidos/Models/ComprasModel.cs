@@ -3,7 +3,7 @@ using Dapper.Contrib.Extensions;
 namespace API.Models
 {
     [Table("Compras")]
-    public class ComprasModels
+    public class ComprasModel
     {
 
         //NECESARIO MODIFICAR EN RELACIÓN A LA TABLA PEDIDOS

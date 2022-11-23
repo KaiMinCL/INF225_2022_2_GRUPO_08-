@@ -18,9 +18,9 @@ builder.Services.AddEndpointsApiExplorer();
 #region SWAGGER
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v2", new OpenApiInfo
+    options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Version = "v2",
+        Version = "v1",
         Title = "API PEDIDOS",
         Description = "GRUPO 08 - INF225"
     });
