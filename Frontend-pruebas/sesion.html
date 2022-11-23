@@ -6,13 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title>Veysa Manualidades</title>
+    <title>Inicia Sesión</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/">
 
     
 
-    <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -42,6 +41,7 @@
     
 
 <!-- Banda info contacto -->
+<div class="container">
 <nav class="navbar navbar-light" style="background-color: #a1d3d2;">
   <a class="navbar-brand" href="#">
       <div class="row">
@@ -57,11 +57,23 @@
     <a class="py-2" href="#" aria-label="Veysa">
       <img src="img/logo_veysa.jpg" alt="..." class="rounded float-left" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Logo</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
     </a>
+    <p class="py-2 d-none d-md-inline-block">INICIA SESIÓN</p>
     <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-    <a class="py-2 d-none d-md-inline-block" href="#QS">¿Quiénes somos?</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Tienda</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Iniciar Sesión</a>
-    <a class="py-2 d-none d-md-inline-block" href="#"><img src="img/canasta.png" alt="..." class="rounded float-left"></a>
-    
+        
   </div>
 </nav>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <img id="QS" src="img/logo_identificate.jpg" class="img-fluid" alt="Cinta imágenes">
+  </div>
+
+  <form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Por Favor Inicie Sesión</h1>
+    <label for="inputEmail" class="sr-only">Nombre de Usuario</label>
+    <input type="name" id="inputEmail" class="form-control" placeholder="Nombre de Usuario" required autofocus>
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Acceder</button>
+  </form>
+</div>
+</div>
