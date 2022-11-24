@@ -31,6 +31,8 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
 > - [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 > - [Swagger](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-6.0) para la documentación de las APIs
 > - [DbUP](https://github.com/wormaza/Transversal.Util.BaseDBUp) para la implementación de parches
+> - Servidor web escrito en Python
+> - Librerías Python utilizadas: Flask y Requests
  
 
 ## Evidencias
