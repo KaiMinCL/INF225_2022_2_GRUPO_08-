@@ -36,9 +36,9 @@ namespace API.Controllers
         /// </remarks>
         /// <response code="200">Returns ...</response>
 
-        [HttpGet("")]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult<AgendaModel>> GetAgenda(string id) => await base.GetById(id);
+        //[HttpGet("")]
+        //[ProducesResponseType((int)HttpStatusCode.OK)]
+        //public async Task<ActionResult<AgendaModel>> GetAgendaById(string id) => await base.GetById(id);
 
         /// <summary>
         /// Permite agregar pedidos a la agenda
