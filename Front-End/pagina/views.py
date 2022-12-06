@@ -9,3 +9,7 @@ def home():
 @views.route('/tienda')
 def tienda():
     return render_template("tienda.html")
+
+@views.route('/carrito')
+def carrito():
+    return render_template("carrito.html")
