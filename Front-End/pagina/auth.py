@@ -13,3 +13,7 @@ def registrar_cliente():
 @auth.route('/sign-up-staff', methods=['GET','POST'])
 def registrar_staff():
     return render_template("registrar staff.html")
+
+@auth.route('/sign-up-tienda', methods=['GET','POST'])
+def registrar_tienda():
+    return render_template("registrar tienda.html")
