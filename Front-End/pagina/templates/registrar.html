@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+{% block contenido %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <form method="POST">
+        <h3 align="center">Cree una cuenta nueva</h3>
+        <div class="form-group">
+          <label for="email">Dirección de correo electronico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Ingrese su correo electronico"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Nombre">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nombre"
+            name="Nombre"
+            placeholder="Ingrese su nombre"
+          />
+        </div>
+        <div class="form-group">
+            <label for="RUT">RUT</label>
+            <input
+              type="text"
+              class="form-control"
+              id="RUT"
+              name="RUT"
+              placeholder="Ingrese su RUT"
+            />
+          </div>
+        <div class="form-group">
+          <label for="password1">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password1"
+            name="password1"
+            placeholder="Ingrese su contraseña"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirme su contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password2"
+            name="password2"
+            placeholder="Ingrese su contraseña nuevamente"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+      </form>
+</div>
+{% endblock %}
