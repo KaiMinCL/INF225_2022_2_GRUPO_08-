@@ -30,6 +30,6 @@ def create_app():
             if staff['iD_STAFF'] == int(id):
                 cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['usuario'], staff['iD_Tienda'], staff['contrasena'])
                 return cstaff
-        #Retornar None si es que no es encontraod el usuario
+        #Retornar None si es que no es encontrado el usuario
         return None
     return app

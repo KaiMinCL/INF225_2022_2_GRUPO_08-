@@ -11,17 +11,35 @@ def login():
         if request.method == 'POST':
             nombre = request.form.get('Nombre')
             pwd = request.form.get('password')
-
+            #Buscar entre los clientes
             Clients = requests.get('http://localhost:5058/Clientes')
             clientsjson = Clients.json()
+            isclient = False
             for client in clientsjson:
                 if client['nombre'] == nombre:
                     cclient = Client(client['iD_Cliente'], client['nombre'], client['rut'], client['contrasena'])
-            if cclient:
+                    isclient = True
+            if isclient:
                 if check_password_hash(cclient.pwd, pwd):
                     flash('Inició sesión correctamente!', category='success')
                     login_user(cclient, remember=True)
                     return redirect(url_for('views.home'))
+                else:
+                    flash('Contraseña equivocada, intente nuevamente', category='error')
+                    return redirect(url_for('auth.login'))
+            #Buscar entre el Staff
+            rstaff = requests.get('http://localhost:5058/STAFF')
+            staffjson = rstaff.json()
+            isstaff = False
+            for staff in staffjson:
+                if staff['usuario'] == nombre:
+                    cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['usuario'], staff['iD_Tienda'], staff['contrasena'])
+                    isstaff = True
+            if isstaff:
+                if check_password_hash(cstaff.pwd, pwd):
+                    flash('Inició sesión correctamente!', category='success')
+                    login_user(cstaff, remember=True)
+                    return redirect(url_for('views.menustaff'))
                 else:
                     flash('Contraseña equivocada, intente nuevamente', category='error')
                     return redirect(url_for('auth.login'))
@@ -35,7 +53,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('views.tienda'))
+    return redirect(url_for('views.home'))
 
 @auth.route('/sign-up-client', methods=['GET','POST'])
 def registrar_cliente():
