@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request
+from flask_login import login_required, current_user
 
 views = Blueprint('views', __name__)
 
@@ -11,46 +12,51 @@ def tienda():
     return render_template("tienda.html")
 
 @views.route('/carrito')
+@login_required
 def carrito():
     return render_template("carrito.html")
 
 @views.route('/finalizarcompra')
+@login_required
 def fc():
     return render_template("finalizar_compra.html")
 
 @views.route('/comprafinal')
+@login_required
 def compra_final():
     return render_template("compra_lista.html")
 
-
-@views.route('/sesion')
-def sesion():
-    return render_template("sesion.html")
-
 @views.route('/menustaff')
+@login_required
 def menustaff():
     return render_template("menu_staff.html")
 
 @views.route('/inventario')
+@login_required
 def inventario():
     return render_template("inventario.html")
 
 @views.route('/productosstaff')
+@login_required
 def productosstaff():
     return render_template("productos_staff.html")
 
 @views.route('/estadisticas')
+@login_required
 def estadisticas():
     return render_template("estadisticas.html")
 
 @views.route('/pedidos')
+@login_required
 def pedidos():
     return render_template("pedidos.html")
 
 @views.route('/agregarinsumos')
+@login_required
 def agregarinsumos():
     return render_template("agregar_insumo.html")
 
 @views.route('/editarproducto')
+@login_required
 def editarproducto():
     return render_template("editar_producto.html")
