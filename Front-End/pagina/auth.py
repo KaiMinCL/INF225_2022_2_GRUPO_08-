@@ -19,8 +19,10 @@ def registrar_cliente():
 
         if len(nombre) < 2:
             flash('Nombre debe ser más largo que 1 caracter', category='error')
+            return redirect(url_for('auth.registrar_cliente'))
         elif password1 != password2:
             flash('Las contraseñas no coinciden', category='error')
+            return redirect(url_for('auth.registrar_cliente'))
         else:
             new_user = {'nombre' : nombre, 'rut' : rut , 'contrasena' : generate_password_hash(password1, method='sha256')} #Agregamos algo de seguridad a las contrasenas
             r = requests.post('http://localhost:5058/Clientes', json=new_user)
@@ -49,10 +51,13 @@ def registrar_staff():
             return redirect(url_for('auth.registrar_staff'))
         elif len(nombre) < 2:
             flash('Nombre debe ser más largo que 1 caracter', category='error')
+            return redirect(url_for('auth.registrar_staff'))
         elif len(usuario) < 2:
             flash('Nombre de usuario debe ser más largo que 1 caracter', category='error')
+            return redirect(url_for('auth.registrar_staff'))
         elif password1 != password2:
             flash('Las contraseñas no coinciden', category='error')
+            return redirect(url_for('auth.registrar_staff'))
         else:
             new_user = {'nombre' : nombre, 'usuario' : usuario , 'contrasena' : generate_password_hash(password1, method='sha256'), 'iD_Tienda' : iD_Tienda} #Agregamos algo de seguridad a las contrasenas
             r = requests.post('http://localhost:5058/STAFF', json=new_user)
@@ -69,6 +74,7 @@ def registrar_tienda():
 
         if len(nombre) < 2:
             flash('Nombre debe ser más largo que 1 caracter', category='error')
+            return redirect(url_for('auth.registrar_tienda'))
         else:
             new_tienda = {'nombre' : nombre, 'instagram' : insta}
             r = requests.post('http://localhost:5058/Tiendas', json=new_tienda)

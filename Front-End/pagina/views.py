@@ -22,10 +22,6 @@ def fc():
 def compra_final():
     return render_template("compra_lista.html")
 
-@views.route('/registrocliente')
-def registrocliente():
-    return render_template("registrarcliente.html")
-
 
 @views.route('/sesion')
 def sesion():
