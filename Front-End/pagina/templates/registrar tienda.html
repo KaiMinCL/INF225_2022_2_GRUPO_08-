@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+{% block contenido %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <form method="POST">
+        <h3 align="center">Registre una tienda nueva</h3>
+        <div class="form-group">
+          <label for="Nombre">Nombre de su tienda</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Nombre"
+            name="Nombre"
+            placeholder="Ingrese el nombre de su tienda"
+          />
+        </div>
+        <div class="form-group">
+          <label for="instagram">Cuenta de Instagram asociada</label>
+          <input
+            type="text"
+            class="form-control"
+            id="instagram"
+            name="instagram"
+            placeholder="Ingrese su usuario de Instagram"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+</div>
+{% endblock %}
