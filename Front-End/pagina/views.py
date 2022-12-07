@@ -39,9 +39,9 @@ def menustaff():
 def inventario():
     return render_template("inventario.html")
 
-@views.route('/productos')
-def productos():
-    return render_template("productos.html")
+@views.route('/productosstaff')
+def productosstaff():
+    return render_template("productos_staff.html")
 
 @views.route('/estadisticas')
 def estadisticas():
@@ -50,3 +50,7 @@ def estadisticas():
 @views.route('/pedidos')
 def pedidos():
     return render_template("pedidos.html")
+
+@views.route('/agregarinsumos')
+def agregarinsumos():
+    return render_template("agregar_insumo.html")
