@@ -54,3 +54,7 @@ def pedidos():
 @views.route('/agregarinsumos')
 def agregarinsumos():
     return render_template("agregar_insumo.html")
+
+@views.route('/editarproducto')
+def editarproducto():
+    return render_template("editar_producto.html")
