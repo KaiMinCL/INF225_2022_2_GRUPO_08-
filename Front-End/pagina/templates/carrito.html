@@ -1,2 +1,24 @@
 {% extends "base.html" %}
-{% block title %}Carrito{% endblock %}
+{% block contenido %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <img id="QS" src="../static/img/carrito_frase.jpg" class="img-fluid" alt="Cinta imágenes">
+    <img id="QS" src="../static/img/agregado_satisfactoriamente.jpg" class="img-fluid" alt="Cinta imágenes">
+  </div>
+
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <a href="/tienda" class="btn btn-primary">Seguir Comprando</a>
+        </div>
+      </div>
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <a href="/finalizarcompra" class="btn btn-primary">Finalizar Compra</a>
+        </div>
+      </div>
+
+          
+{% endblock %}

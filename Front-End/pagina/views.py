@@ -13,3 +13,11 @@ def tienda():
 @views.route('/carrito')
 def carrito():
     return render_template("carrito.html")
+
+@views.route('/finalizarcompra')
+def fc():
+    return render_template("finalizar_compra.html")
+
+@views.route('/comprafinal')
+def compra_final():
+    return render_template("compra_lista.html")
