@@ -1,0 +1,37 @@
+.container {
+    max-width: 960px;
+  }
+
+  .body{
+    background-color: #e6d4c9;
+  }
+  
+  .site-header {
+    background-color: #dfa095;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+    color: rgb(0, 0, 0);
+    transition: ease-in-out color .15s;
+  }
+  .site-header a:hover {
+    color: #e6d4c9;
+    text-decoration: none;
+  }
+  
+  
+  
+  .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+  

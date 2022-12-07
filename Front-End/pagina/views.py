@@ -30,3 +30,11 @@ def registrocliente():
 @views.route('/sesion')
 def sesion():
     return render_template("sesion.html")
+
+@views.route('/menustaff')
+def menustaff():
+    return render_template("menu_staff.html")
+
+@views.route('/inventario')
+def inventario():
+    return render_template("inventario.html")
