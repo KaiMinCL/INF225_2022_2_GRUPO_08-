@@ -38,3 +38,15 @@ def menustaff():
 @views.route('/inventario')
 def inventario():
     return render_template("inventario.html")
+
+@views.route('/productos')
+def productos():
+    return render_template("productos.html")
+
+@views.route('/estadisticas')
+def estadisticas():
+    return render_template("estadisticas.html")
+
+@views.route('/pedidos')
+def pedidos():
+    return render_template("pedidos.html")
