@@ -10,7 +10,6 @@ namespace API.Models
         [Key]
         public int ID_STAFF { get; set; }
         public string? Nombre { get; set; }
-        public string? Correo { get; set; }
         public string? Contrasena { get; set; }
         public int ID_Tienda {get; set;}
     }
