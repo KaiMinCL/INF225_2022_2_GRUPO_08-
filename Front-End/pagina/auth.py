@@ -32,8 +32,8 @@ def login():
             staffjson = rstaff.json()
             isstaff = False
             for staff in staffjson:
-                if staff['usuario'] == nombre:
-                    cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['usuario'], staff['iD_Tienda'], staff['contrasena'])
+                if staff['nombre'] == nombre:
+                    cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['iD_Tienda'], staff['contrasena'])
                     isstaff = True
             if isstaff:
                 if check_password_hash(cstaff.pwd, pwd):
@@ -84,7 +84,6 @@ def registrar_cliente():
 def registrar_staff():
     if request.method == 'POST':
         nombre = request.form.get('Nombre')
-        usuario = request.form.get('username')
         iD_Tienda = int(request.form.get('tienda'))
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
@@ -101,17 +100,17 @@ def registrar_staff():
         elif len(nombre) < 2:
             flash('Nombre debe ser más largo que 1 caracter', category='error')
             return redirect(url_for('auth.registrar_staff'))
-        elif len(usuario) < 2:
-            flash('Nombre de usuario debe ser más largo que 1 caracter', category='error')
-            return redirect(url_for('auth.registrar_staff'))
         elif password1 != password2:
             flash('Las contraseñas no coinciden', category='error')
             return redirect(url_for('auth.registrar_staff'))
         else:
-            new_user = {'nombre' : nombre, 'usuario' : usuario , 'contrasena' : generate_password_hash(password1, method='sha256'), 'iD_Tienda' : iD_Tienda} 
-            r = requests.post('http://localhost:5058/STAFF', json=new_user)
+            payload = {'nombre' : nombre, 'contrasena' : generate_password_hash(password1, method='sha256'), 'iD_Tienda' : iD_Tienda} 
+            r = requests.post('http://localhost:5058/STAFF', json=payload)
+            id = r.json()['iD_STAFF']
+            new_staff = Staff(id, nombre, iD_Tienda, payload['contrasena'])
+            login_user(new_staff, remember=True)
             flash('Cuenta creada!', category='success')
-            return redirect(url_for('views.home'))
+            return redirect(url_for('views.menustaff'))
     else:
         return render_template("registrar staff.html")
 

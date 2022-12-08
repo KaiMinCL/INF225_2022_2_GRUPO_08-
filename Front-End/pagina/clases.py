@@ -8,9 +8,11 @@ class Client(UserMixin):
         self.pwd = contrasena
 
 class Staff(UserMixin):
-    def __init__(self, id, nombre, username, tienda, contrasena):
+    def __init__(self, id, nombre, tienda, contrasena):
         self.id = id
         self.nombre = nombre
-        self.username = username
         self.pwd = contrasena
         self.iD_tienda = tienda
+    
+    def get_tienda(self):
+        return self.iD_tienda
