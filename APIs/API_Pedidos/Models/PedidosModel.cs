@@ -11,5 +11,6 @@ namespace API.Models
         public int ID_Pedido { get; set; }
         public int Valor { get; set; }
         public int ID_Tienda { get; set; }
+        public int ID_Compra { get; set; }
     }
 }

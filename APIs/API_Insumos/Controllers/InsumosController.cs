@@ -50,9 +50,29 @@ namespace API.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<InsumosModel>> PostInsumo([FromBody]InsumosModel value) => await base.Post(value);
 
+        /// <summary>
+        /// Permite Modificar Insumos
+        /// </summary>
+        /// <param name="value">Informacion del tipo de documento</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// </remarks>
+        /// <response code="200">Inserción correcta</response>
+
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<InsumosModel>> PutInsumo([FromBody]InsumosModel value) => await base.Put(value);
+
+        /// <summary>
+        /// Permite Eliminar Insumos
+        /// </summary>
+        /// <param name="value">Informacion del tipo de documento</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// </remarks>
+        /// <response code="200">Inserción correcta</response>
 
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
