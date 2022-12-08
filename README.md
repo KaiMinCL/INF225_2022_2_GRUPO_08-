@@ -32,8 +32,11 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
 > - [Swagger](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-6.0) para la documentación de las APIs
 > - [DbUP](https://github.com/wormaza/Transversal.Util.BaseDBUp) para la implementación de parches
 > - Servidor web escrito en Python
-> - Librerías Python utilizadas: Flask y Requests
- 
+> - Framework utilizado: Flask
+
+## Ejecución
+> - Antes de levantar el servidor web se deben instalar las librerías necesarias para que funcione flask y el programa
+> - Se deben ejecutar los siguientes comandos:
 
 ## Evidencias
 Para revisar evidencias sobre el levantamiento del proyecto, ingrese [aquí](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-08/-/wikis/Evidencias-Levantamiento)
