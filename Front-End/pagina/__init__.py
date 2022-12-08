@@ -28,7 +28,7 @@ def create_app():
         staffjson = rstaff.json()
         for staff in staffjson:
             if staff['iD_STAFF'] == int(id):
-                cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['usuario'], staff['iD_Tienda'], staff['contrasena'])
+                cstaff = Staff(staff['iD_STAFF'], staff['nombre'], staff['iD_Tienda'], staff['contrasena'])
                 return cstaff
         #Retornar None si es que no es encontrado el usuario
         return None
