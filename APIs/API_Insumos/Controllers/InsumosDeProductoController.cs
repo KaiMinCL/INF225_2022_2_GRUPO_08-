@@ -50,9 +50,30 @@ namespace API.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<ActionResult<InsumosDeProductoModel>> PostInsumosDeProducto([FromBody]InsumosDeProductoModel value) => await base.Post(value);
 
+        /// <summary>
+        /// Permite Modificar Insumos de un Producto
+        /// </summary>
+        /// <param name="value">Informacion del tipo de documento</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// </remarks>
+        /// <response code="200">Inserción correcta</response>
+
         [HttpPut]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<ActionResult<InsumosDeProductoModel>> PutIInsumosDeProducto([FromBody]InsumosDeProductoModel value) => await base.Put(value);
+        public async Task<ActionResult<InsumosDeProductoModel>> PutInsumosDeProducto([FromBody]InsumosDeProductoModel value) => await base.Put(value);
+
+        /// <summary>
+        /// Permite Eliminar todos los insumos de un producto degún el ID del Producto
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value">Informacion del tipo de documento</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Aqui se puede indicar un ejemplo de como llamar este servicio
+        /// </remarks>
+        /// <response code="200">Inserción correcta</response>
 
         [HttpDelete("{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]

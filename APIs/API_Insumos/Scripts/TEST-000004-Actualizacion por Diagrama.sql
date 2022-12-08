@@ -1,0 +1,5 @@
+ALTER TABLE Insumos
+ADD ID_Tienda INT NOT NULL
+
+ALTER TABLE Productos
+ADD ID_Tienda INT NOT NULL
