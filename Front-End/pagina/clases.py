@@ -13,3 +13,6 @@ class Staff(UserMixin):
         self.nombre = nombre
         self.pwd = contrasena
         self.iD_tienda = tienda
+    
+    def get_tienda(self):
+        return self.iD_tienda

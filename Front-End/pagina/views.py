@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
+import requests
 
 views = Blueprint('views', __name__)
 
@@ -34,7 +35,15 @@ def menustaff():
 @views.route('/inventario')
 @login_required
 def inventario():
-    return render_template("inventario.html", user=current_user)
+    data = requests.get('http://localhost:5057/Insumos')
+    insumos = data.json() #Lista de insumos (diccionarios)
+    #tienda = current_user.get_tienda()
+    #insumos_lista = []
+    #for insumo in insumos:
+    #    if insumo['iD_Tienda'] == str(tienda):
+    #        insumos_lista.append(insumo)
+    
+    return render_template("inventario.html", user=current_user, inventario=insumos)
 
 @views.route('/productosstaff')
 @login_required

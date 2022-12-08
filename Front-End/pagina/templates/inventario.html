@@ -17,20 +17,15 @@
           <td>STOCK</td>
           <td>EDITAR/ELIMINAR</td>
         </tr>
+        {% for insumo in inventario %}
         <tr>
-          <th scope="row">CM_01</th>
-          <td>Cartulina Metálica Gris</td>
-          <td>8</td>
+          <th scope="row">{{ insumo['iD_Insumo'] }}</th>
+          <td>{{ insumo['nombre'] }}</td>
+          <td>{{ insumo['stock'] }}</td>
           <td><a type="button" class="btn btn-outline-primary" href="/agregarinsumos">EDITAR</a><a type="button" class="btn btn-outline-primary" href="/agregarinsumos">ELIMINAR</a>
           </td>
         </tr>
-        <tr>
-          <th scope="row">CM_03</th>
-          <td>Cartulina Metálica Roja</td>
-          <td>5</td>
-          <td><a type="button" class="btn btn-outline-primary" href="/agregarinsumos">EDITAR</a><a type="button" class="btn btn-outline-primary" href="/agregarinsumos">ELIMINAR</a>
-          </td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
   </body>
