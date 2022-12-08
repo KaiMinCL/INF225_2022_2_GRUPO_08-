@@ -13,6 +13,7 @@ def tienda():
     return render_template("tienda.html")
 
 @views.route('/carrito')
+
 @login_required
 def carrito():
     return render_template("carrito.html")

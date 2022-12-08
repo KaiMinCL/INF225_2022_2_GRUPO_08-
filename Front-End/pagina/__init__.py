@@ -23,6 +23,7 @@ def create_app():
             if client['iD_Cliente'] == int(id):
                 cclient = Client(client['iD_Cliente'], client['nombre'], client['rut'], client['contrasena'])
                 return cclient
+                
         #Buscar entre el Staff
         rstaff = requests.get('http://localhost:5058/STAFF')
         staffjson = rstaff.json()

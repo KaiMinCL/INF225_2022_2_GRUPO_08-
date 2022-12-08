@@ -12,6 +12,7 @@ def login():
             nombre = request.form.get('Nombre')
             pwd = request.form.get('password')
             #Buscar entre los clientes
+            
             Clients = requests.get('http://localhost:5058/Clientes')
             clientsjson = Clients.json()
             isclient = False
