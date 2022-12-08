@@ -3,3 +3,6 @@ ADD Correo varchar(100) NOT NULL
 
 ALTER TABLE STAFF
 ADD Correo varchar(100) NOT NULL
+
+ALTER TABLE STAFF
+DROP COLUMN Usuario
