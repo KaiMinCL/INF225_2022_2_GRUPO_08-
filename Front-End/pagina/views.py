@@ -34,7 +34,7 @@ def menustaff():
 @views.route('/inventario')
 @login_required
 def inventario():
-    return render_template("inventario.html")
+    return render_template("inventario.html", user=current_user)
 
 @views.route('/productosstaff')
 @login_required
