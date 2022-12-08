@@ -38,6 +38,7 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
  - Antes de levantar el servidor web se deben instalar las librerías necesarias para que funcione flask y el programa
  - Se deben ejecutar los siguientes comandos:
  ```bat
+pip install Flask
 pip install requests
 ```
 
