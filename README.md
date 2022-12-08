@@ -35,12 +35,23 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
 > - Framework utilizado: Flask
 
 ## Ejecución
- - Antes de levantar el servidor web se deben instalar las librerías necesarias para que funcione flask y el programa
+ - Antes de levantar el servidor web se deben instalar las librerías necesarias para que funcione Flask y la aplicación
  - Se deben ejecutar los siguientes comandos:
  ```bat
-pip install Flask
 pip install requests
 ```
+ ```bat
+pip install flask
+```
+ ```bat
+pip install flask-login
+```
+ - Luego dentro de la carpeta Front-End, se debe ejecutar la aplicación
+ ```bat
+python main.py
+```
+- En la consola se muestra la dirección en que está corriendo la aplicación, se debe acceder a ella mediante su navegador de preferencia
+
 
 ## Evidencias
 Para revisar evidencias sobre el levantamiento del proyecto, ingrese [aquí](https://gitlab.inf.utfsm.cl/wormazab/inf225-2022-2-grupo-08/-/wikis/Evidencias-Levantamiento)
