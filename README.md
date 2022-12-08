@@ -32,7 +32,7 @@ Pueden acceder a la Api ejecutando la siguiente carpeta [API](https://gitlab.inf
 > - [Swagger](https://learn.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-6.0) para la documentación de las APIs
 > - [DbUP](https://github.com/wormaza/Transversal.Util.BaseDBUp) para la implementación de parches
 > - Servidor web escrito en Python
-> - Framework utilizado: Flask
+> - Framework utilizado para crear el servidor web: Flask
 
 ## Ejecución
  - Antes de levantar el servidor web se deben instalar las librerías necesarias para que funcione Flask y la aplicación
